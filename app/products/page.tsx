@@ -1,0 +1,146 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+interface ProductItem {
+  id: string;
+  name: string;
+  desc: string;
+  image: string;
+}
+
+export default function ProductsPage() {
+  const products: ProductItem[] = [
+    {
+      id: "aluminum",
+      name: "Aluminum Systems",
+      desc: "Premium casement, awning, and sliding windows engineered with lightweight structural frames and advanced thermal break barriers.",
+      image: "/images/hero_bg.png",
+    },
+    {
+      id: "upvc",
+      name: "uPVC Systems",
+      desc: "High-insulation, multi-chambered window and door profiles formulated to resist harsh tropical sun, wind loads, and noise infiltration.",
+      image: "/images/project_villa.png",
+    },
+    {
+      id: "panels",
+      name: "Architectural Panels",
+      desc: "Modern aluminum composite cladding panels and customized structural panels engineered for premium commercial building facades.",
+      image: "/images/project_office.png",
+    },
+    {
+      id: "screens",
+      name: "Insect & Security Screens",
+      desc: "High-tensile marine-grade 316 stainless steel mesh screens integrated seamlessly into existing profiles to protect against intrusion.",
+      image: "/images/office_photo.png",
+    },
+    {
+      id: "sunflex",
+      name: "Sunflex Folding Systems",
+      desc: "Sleek sliding-folding architectural glass doors that stack together to create open, seamless transitions between indoor and outdoor living areas.",
+      image: "/images/project_condo.png",
+    },
+  ];
+
+  return (
+    <div className="flex flex-col w-full min-h-screen">
+      {/* 1. Page Hero Banner */}
+      <section className="relative flex h-[35vh] min-h-[250px] items-center justify-center overflow-hidden bg-zinc-950 text-white">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero_bg.png"
+            alt="Products overview background facade"
+            fill
+            priority
+            className="object-cover opacity-35 select-none"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8 flex flex-col gap-3 animate-fade-in">
+          <span className="text-xs font-bold uppercase tracking-widest text-teal-400">
+            Our Solutions
+          </span>
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-white">
+            Product Systems
+          </h1>
+          <p className="max-w-2xl text-base sm:text-lg text-zinc-300 leading-relaxed mx-auto">
+            High-performance structural envelopes, glazing, and customized window systems.
+          </p>
+        </div>
+      </section>
+
+      {/* 2. Products List Grid Section */}
+      <section className="bg-white py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          
+          {/* Main Title Description */}
+          <div className="mx-auto max-w-3xl text-center flex flex-col gap-4 mb-16 sm:mb-20">
+            <span className="text-sm font-bold uppercase tracking-wider text-teal-600">
+              System Families
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+              Architectural Product Portfolios
+            </h2>
+            <p className="text-base sm:text-lg text-zinc-500 leading-relaxed">
+              We design and fabricate all profile families in-house, matching strict structural compliance criteria and wind velocity demands.
+            </p>
+          </div>
+
+          {/* 5-Card Product Grid */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {products.map((prod) => (
+              <div
+                key={prod.id}
+                className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-zinc-200/60 bg-white shadow-sm hover:shadow-md transition-shadow"
+              >
+                {/* Product Image Frame */}
+                <div className="relative h-60 w-full overflow-hidden bg-zinc-100">
+                  <Image
+                    src={prod.image}
+                    alt={`${prod.name} layout rendering`}
+                    fill
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
+                </div>
+
+                {/* Product Card Text and Button */}
+                <div className="flex flex-col flex-1 p-6 justify-between gap-5">
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg font-bold text-zinc-900 group-hover:text-teal-600 transition-colors">
+                      {prod.name}
+                    </h3>
+                    <p className="text-sm text-zinc-500 leading-relaxed">
+                      {prod.desc}
+                    </p>
+                  </div>
+                  
+                  {/* Learn More link */}
+                  <div className="pt-2 border-t border-zinc-100">
+                    <Link
+                      href={`/products/${prod.id}`}
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-teal-600 hover:text-teal-700 group/link"
+                    >
+                      Learn More
+                      <svg
+                        className="h-4 w-4 transition-transform group-hover/link:translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2.5}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+    </div>
+  );
+}
