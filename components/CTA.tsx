@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="bg-zinc-900 py-16 sm:py-24 text-white relative overflow-hidden border-t border-zinc-800">
-      {/* Brand Teal glow overlay */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-950/40 via-transparent to-transparent opacity-75 pointer-events-none" />
+    <section className="bg-brand-dark py-16 sm:py-24 text-white relative overflow-hidden border-t border-brand-secondary/10">
+      {/* Brand primary glow overlay */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-primary/10 via-transparent to-transparent opacity-75 pointer-events-none" />
 
       {/* Content Container */}
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8 flex flex-col items-center gap-6">
@@ -24,7 +24,7 @@ export default function CTA() {
         <div className="mt-4">
           <Link
             href="/contact"
-            className="inline-flex h-12 items-center justify-center rounded-lg bg-teal-600 px-8 text-base font-semibold text-white transition-all hover:bg-teal-700 hover:shadow-lg hover:shadow-teal-900/30 active:scale-95"
+            className="inline-flex h-12 items-center justify-center rounded-lg bg-brand-primary px-8 text-base font-bold text-brand-dark transition-all hover:bg-brand-primary-hover hover:shadow-lg hover:shadow-brand-primary/20 active:scale-95"
           >
             Contact Us
           </Link>

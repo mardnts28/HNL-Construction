@@ -52,11 +52,11 @@ export default function WhyChooseUs() {
         
         {/* Header Title Grid */}
         <div className="mx-auto max-w-3xl text-center flex flex-col gap-4 mb-16 sm:mb-20">
-          <span className="text-sm font-bold uppercase tracking-wider text-teal-600">
-            Why Weswin
+          <span className="text-sm font-bold uppercase tracking-wider text-brand-primary">
+            Why HNL Construction
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-            The Weswin Advantage
+          <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl">
+            The HNL Advantage
           </h2>
           <p className="text-base sm:text-lg text-zinc-500 leading-relaxed">
             We hold ourselves to strict manufacturing benchmarks and engineering criteria, guaranteeing your project stands firm against time, wear, and weather.
@@ -71,13 +71,13 @@ export default function WhyChooseUs() {
               className="flex flex-col items-start gap-4 rounded-2xl bg-white p-7 shadow-sm border border-zinc-200/50 hover:shadow-md transition-shadow group"
             >
               {/* Feature Icon Container */}
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-secondary/20 text-brand-primary group-hover:bg-brand-primary group-hover:text-brand-dark transition-colors">
                 {feat.icon}
               </div>
 
               {/* Text Blocks */}
               <div className="flex flex-col gap-2">
-                <h3 className="text-base font-extrabold text-zinc-900 group-hover:text-teal-600 transition-colors">
+                <h3 className="text-base font-extrabold text-brand-dark group-hover:text-brand-primary transition-colors">
                   {feat.title}
                 </h3>
                 <p className="text-sm text-zinc-500 leading-relaxed">

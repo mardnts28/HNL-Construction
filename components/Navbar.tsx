@@ -58,7 +58,7 @@ export default function Navbar() {
           
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-zinc-900 text-teal-500 transition-colors group-hover:bg-teal-600 group-hover:text-white">
+            <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-dark text-brand-primary transition-colors group-hover:bg-brand-primary group-hover:text-white">
               {/* Construction-themed geometric frame SVG logo */}
               <svg
                 className="h-6 w-6 stroke-current fill-none stroke-2"
@@ -71,10 +71,10 @@ export default function Navbar() {
               </svg>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-zinc-900">
-                WESWIN
+              <span className="text-xl font-bold tracking-tight text-brand-dark">
+                HNL Construction
               </span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-teal-600 -mt-1.5">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-brand-primary -mt-1.5">
                 Architectural Systems
               </span>
             </div>
@@ -94,10 +94,10 @@ export default function Navbar() {
                   >
                     <button
                       onClick={() => setDropdownOpen(!dropdownOpen)}
-                      className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-teal-600 py-2 cursor-pointer ${
+                      className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-brand-primary py-2 cursor-pointer ${
                         pathname.startsWith(link.href)
-                          ? "text-teal-600 font-semibold"
-                          : "text-zinc-600"
+                          ? "text-brand-primary font-semibold"
+                          : "text-brand-dark/70"
                       }`}
                       aria-expanded={dropdownOpen}
                     >
@@ -121,19 +121,19 @@ export default function Navbar() {
                         <div className="rounded-xl border border-zinc-200/80 bg-white p-2 shadow-xl ring-1 ring-black/5">
                           <Link
                             href="/products"
-                            className="block rounded-lg px-4 py-2 text-xs font-bold uppercase tracking-wider text-teal-700 hover:bg-zinc-50 transition-colors"
+                            className="block rounded-lg px-4 py-2 text-xs font-bold uppercase tracking-wider text-brand-primary hover:bg-brand-secondary/10 transition-colors"
                           >
                             All Products Overview
                           </Link>
-                          <div className="my-1 border-t border-zinc-100" />
+                          <div className="my-1 border-t border-brand-secondary/20" />
                           {productItems.map((item) => (
                             <Link
                               key={item.href}
                               href={item.href}
-                              className={`block rounded-lg px-4 py-3 text-sm transition-colors hover:bg-zinc-50 ${
+                              className={`block rounded-lg px-4 py-3 text-sm transition-colors hover:bg-brand-secondary/10 ${
                                 pathname === item.href
-                                  ? "bg-teal-50 text-teal-700 font-semibold"
-                                  : "text-zinc-800"
+                                  ? "bg-brand-secondary/20 text-brand-primary font-semibold"
+                                  : "text-brand-dark"
                               }`}
                             >
                               <span className="block font-medium">{item.name}</span>
@@ -154,8 +154,8 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-teal-600 ${
-                    isActive ? "text-teal-600 font-semibold" : "text-zinc-600"
+                  className={`text-sm font-medium transition-colors hover:text-brand-primary ${
+                    isActive ? "text-brand-primary font-semibold" : "text-brand-dark/70"
                   }`}
                 >
                   {link.name}
@@ -168,7 +168,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <Link
               href="/contact"
-              className="rounded-lg bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-teal-600 hover:shadow-md hover:shadow-teal-900/10 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+              className="rounded-lg bg-brand-dark px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-brand-primary hover:shadow-md hover:shadow-brand-primary/10 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2"
             >
               Get a Quote
             </Link>
@@ -211,8 +211,8 @@ export default function Navbar() {
                     </span>
                     <Link
                       href="/products"
-                      className={`block rounded-lg px-4 py-2 text-sm font-semibold text-teal-700 ${
-                        pathname === "/products" ? "bg-teal-50" : ""
+                      className={`block rounded-lg px-4 py-2 text-sm font-semibold text-brand-primary ${
+                        pathname === "/products" ? "bg-brand-secondary/20" : ""
                       }`}
                     >
                       Overview (All Products)
@@ -224,8 +224,8 @@ export default function Navbar() {
                           href={item.href}
                           className={`rounded-md py-2 px-3 text-sm transition-colors ${
                             pathname === item.href
-                              ? "bg-teal-50 text-teal-700 font-semibold"
-                              : "text-zinc-600 hover:bg-zinc-50"
+                              ? "bg-brand-secondary/20 text-brand-primary font-semibold"
+                              : "text-brand-dark/70 hover:bg-brand-secondary/10"
                           }`}
                         >
                           {item.name}
@@ -242,7 +242,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={`rounded-lg px-4 py-2 text-base font-medium transition-colors ${
-                    isActive ? "bg-teal-50 text-teal-700 font-semibold" : "text-zinc-800 hover:bg-zinc-50"
+                    isActive ? "bg-brand-secondary/20 text-brand-primary font-semibold" : "text-brand-dark hover:bg-brand-secondary/10"
                   }`}
                 >
                   {link.name}
@@ -250,10 +250,10 @@ export default function Navbar() {
               );
             })}
             
-            <div className="mt-4 pt-4 border-t border-zinc-100">
+            <div className="mt-4 pt-4 border-t border-brand-secondary/20">
               <Link
                 href="/contact"
-                className="flex w-full justify-center rounded-lg bg-zinc-900 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-teal-600"
+                className="flex w-full justify-center rounded-lg bg-brand-dark py-3 text-center text-base font-semibold text-white transition-colors hover:bg-brand-primary"
               >
                 Get a Quote
               </Link>

@@ -77,10 +77,10 @@ export default function Services() {
         
         {/* Header Info */}
         <div className="mx-auto max-w-3xl text-center flex flex-col gap-4 mb-16 sm:mb-20">
-          <span className="text-sm font-bold uppercase tracking-wider text-teal-600">
+          <span className="text-sm font-bold uppercase tracking-wider text-brand-primary">
             Professional Offerings
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl">
             Our Architectural Services & Systems
           </h2>
           <p className="text-base sm:text-lg text-zinc-500 leading-relaxed">
@@ -93,16 +93,16 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group relative flex flex-col items-start gap-5 rounded-2xl border border-zinc-100 bg-zinc-50/50 p-8 shadow-sm transition-all duration-300 hover:border-teal-500/20 hover:bg-white hover:shadow-md"
+              className="group relative flex flex-col items-start gap-5 rounded-2xl border border-zinc-100 bg-zinc-50/50 p-8 shadow-sm transition-all duration-300 hover:border-brand-primary/20 hover:bg-white hover:shadow-md"
             >
               {/* Icon Container */}
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-600 transition-colors group-hover:bg-teal-600 group-hover:text-white">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-secondary/20 text-brand-primary transition-colors group-hover:bg-brand-primary group-hover:text-brand-dark">
                 {service.icon}
               </div>
 
               {/* Title & Desc */}
               <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-bold text-zinc-900 transition-colors group-hover:text-teal-600">
+                <h3 className="text-lg font-bold text-brand-dark transition-colors group-hover:text-brand-primary">
                   {service.title}
                 </h3>
                 <p className="text-sm text-zinc-500 leading-relaxed">
@@ -111,7 +111,7 @@ export default function Services() {
               </div>
 
               {/* Decorative Accent Hover Border */}
-              <div className="absolute inset-x-0 bottom-0 h-1 w-0 rounded-b-2xl bg-teal-500 transition-all duration-300 group-hover:w-full" />
+              <div className="absolute inset-x-0 bottom-0 h-1 w-0 rounded-b-2xl bg-brand-primary transition-all duration-300 group-hover:w-full" />
             </div>
           ))}
         </div>

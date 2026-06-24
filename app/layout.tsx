@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
+const inter = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const jetbrainsMono = JetBrains_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Weswin | Premium Architectural Glass & Aluminum Systems",
-  description: "Weswin Company Inc. is a leading fabricator and distributor of premium architectural aluminum windows, uPVC profiles, facades, and sunflex folding systems.",
+  title: "HNL Construction | Premium Architectural Glass & Aluminum Systems",
+  description: "HNL Construction is a leading fabricator and distributor of premium architectural aluminum windows, uPVC profiles, facades, and folding systems.",
 };
 
 export default function RootLayout({
@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-zinc-50 text-zinc-900 font-sans">
+      <body className="min-h-full flex flex-col bg-brand-bg text-brand-dark font-sans">
         <Navbar />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />

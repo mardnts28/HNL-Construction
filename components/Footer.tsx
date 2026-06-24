@@ -27,7 +27,7 @@ export default function Footer() {
           {/* Column 1: Company Profile & Social Media */}
           <div className="lg:col-span-4 flex flex-col gap-5">
             <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-600 text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-primary text-brand-dark">
                 <svg
                   className="h-6 w-6 stroke-current fill-none stroke-2"
                   viewBox="0 0 24 24"
@@ -40,9 +40,9 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-tight text-white">
-                  WESWIN
+                  HNL Construction
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-teal-400 -mt-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-brand-primary -mt-1.5">
                   Architectural Systems
                 </span>
               </div>
@@ -59,7 +59,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-md bg-zinc-900 text-zinc-400 transition-colors hover:bg-teal-600 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-md bg-zinc-900 text-zinc-400 transition-colors hover:bg-brand-primary hover:text-brand-dark"
                 aria-label="Facebook"
               >
                 <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -72,7 +72,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-md bg-zinc-900 text-zinc-400 transition-colors hover:bg-teal-600 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-md bg-zinc-900 text-zinc-400 transition-colors hover:bg-brand-primary hover:text-brand-dark"
                 aria-label="LinkedIn"
               >
                 <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -92,7 +92,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm transition-colors hover:text-teal-400 hover:underline"
+                    className="text-sm transition-colors hover:text-brand-primary hover:underline"
                   >
                     {link.name}
                   </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm transition-colors hover:text-teal-400"
+                    className="text-sm transition-colors hover:text-brand-primary"
                   >
                     {link.name}
                   </Link>
@@ -130,7 +130,7 @@ export default function Footer() {
               {/* Address */}
               <li className="flex items-start gap-3">
                 <svg
-                  className="h-5 w-5 shrink-0 text-teal-500 mt-0.5"
+                  className="h-5 w-5 shrink-0 text-brand-primary mt-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -155,7 +155,7 @@ export default function Footer() {
               {/* Phone */}
               <li className="flex items-center gap-3">
                 <svg
-                  className="h-5 w-5 shrink-0 text-teal-500"
+                  className="h-5 w-5 shrink-0 text-brand-primary"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -175,7 +175,7 @@ export default function Footer() {
               {/* Email */}
               <li className="flex items-center gap-3">
                 <svg
-                  className="h-5 w-5 shrink-0 text-teal-500"
+                  className="h-5 w-5 shrink-0 text-brand-primary"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -187,8 +187,8 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <a href="mailto:info@weswin.com.ph" className="transition-colors hover:text-white">
-                  info@weswin.com.ph
+                <a href="mailto:info@hnlconstruction.ph" className="transition-colors hover:text-white">
+                  info@hnlconstruction.ph
                 </a>
               </li>
 
@@ -201,7 +201,7 @@ export default function Footer() {
       {/* Sub-footer Section */}
       <div className="border-t border-zinc-900 bg-black/40 py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-          <p>© {new Date().getFullYear()} Weswin Company Inc. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} HNL Construction. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-zinc-400">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-zinc-400">Terms & Conditions</Link>

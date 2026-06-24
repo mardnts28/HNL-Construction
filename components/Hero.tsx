@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8 flex flex-col items-start gap-8 animate-fade-in">
         
         {/* Animated Badge Tagline */}
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-500/20 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-teal-400 border border-teal-500/30">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-primary/20 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-primary border border-brand-primary/30">
           Leader in Architectural Fabrication
         </span>
 
@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="flex flex-col gap-4 max-w-3xl">
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl text-white">
             Building Excellence <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
               Since 2000
             </span>
           </h1>
@@ -44,7 +44,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-4 mt-4 w-full sm:w-auto">
           <Link
             href="/projects"
-            className="flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-teal-600 px-8 text-base font-semibold text-white transition-all hover:bg-teal-700 hover:shadow-lg hover:shadow-teal-900/30 active:scale-95"
+            className="flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-brand-primary px-8 text-base font-bold text-brand-dark transition-all hover:bg-brand-primary-hover hover:shadow-lg hover:shadow-brand-primary/20 active:scale-95"
           >
             View Projects
           </Link>

@@ -10,19 +10,19 @@ interface TestimonialItem {
 export default function Testimonials() {
   const testimonials: TestimonialItem[] = [
     {
-      quote: "Weswin's aluminum casement systems transformed our boutique hotel facade. The wind resistance load ratings and the double-glazing acoustics exceeded all of our design expectations.",
+      quote: "HNL Construction's aluminum casement systems transformed our boutique hotel facade. The wind resistance load ratings and the double-glazing acoustics exceeded all of our design expectations.",
       author: "Engr. Ricardo Silva",
       role: "Project Director",
       company: "Excelsior Corporate Towers",
     },
     {
-      quote: "The customization level Weswin provided for our Forbes Park residential villas was exceptional. Their massive sliding doors slide completely into the wall cavities, creating a flawless indoor-outdoor transition.",
+      quote: "The customization level HNL Construction provided for our Forbes Park residential villas was exceptional. Their massive sliding doors slide completely into the wall cavities, creating a flawless indoor-outdoor transition.",
       author: "Arch. Sofia Martinez",
       role: "Lead Architect",
       company: "ArchiStudio Manila",
     },
     {
-      quote: "We needed an agile glass curtain wall partner for our 40-story commercial tower. Weswin delivered exactly on schedule and handled all structural shop drawings and load tests seamlessly.",
+      quote: "We needed an agile glass curtain wall partner for our 40-story commercial tower. HNL Construction delivered exactly on schedule and handled all structural shop drawings and load tests seamlessly.",
       author: "Marcus Go",
       role: "VP of Operations",
       company: "Metro Cebu Land Corp.",
@@ -35,14 +35,14 @@ export default function Testimonials() {
         
         {/* Header Block */}
         <div className="mx-auto max-w-3xl text-center flex flex-col gap-4 mb-16 sm:mb-20">
-          <span className="text-sm font-bold uppercase tracking-wider text-teal-600">
+          <span className="text-sm font-bold uppercase tracking-wider text-brand-primary">
             Reviews
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl">
             What Our Clients Say
           </h2>
           <p className="text-base sm:text-lg text-zinc-500 leading-relaxed">
-            We partner with leading architects, developers, and general contractors to build structures that endure. Read about their experiences working with Weswin.
+            We partner with leading architects, developers, and general contractors to build structures that endure. Read about their experiences working with HNL Construction.
           </p>
         </div>
 
@@ -69,11 +69,11 @@ export default function Testimonials() {
 
               {/* Author & Company Section */}
               <div className="mt-6 pt-6 border-t border-zinc-100 flex flex-col gap-1">
-                <span className="text-sm font-bold text-zinc-900">
+                <span className="text-sm font-bold text-brand-dark">
                   {test.author}
                 </span>
                 <span className="text-xs text-zinc-500">
-                  {test.role}, <span className="text-teal-600 font-semibold">{test.company}</span>
+                  {test.role}, <span className="text-brand-primary font-semibold">{test.company}</span>
                 </span>
               </div>
             </div>

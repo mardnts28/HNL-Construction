@@ -37,10 +37,10 @@ export default function FeaturedProjects() {
         
         {/* Header Block */}
         <div className="mx-auto max-w-3xl text-center flex flex-col gap-4 mb-16 sm:mb-20">
-          <span className="text-sm font-bold uppercase tracking-wider text-teal-600">
+          <span className="text-sm font-bold uppercase tracking-wider text-brand-primary">
             Our Work
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl">
             Featured Projects
           </h2>
           <p className="text-base sm:text-lg text-zinc-500 leading-relaxed">
@@ -68,8 +68,8 @@ export default function FeaturedProjects() {
                 <div className="absolute top-4 left-4 z-10">
                   <span className={`inline-flex items-center rounded-md px-2.5 py-1 text-xs font-bold uppercase tracking-wider shadow-sm ${
                     proj.category === "Residential"
-                      ? "bg-teal-50 text-teal-700 border border-teal-100"
-                      : "bg-zinc-900 text-white"
+                      ? "bg-brand-secondary/20 text-brand-primary border border-brand-secondary/30"
+                      : "bg-brand-dark text-white"
                   }`}>
                     {proj.category}
                   </span>
@@ -78,14 +78,14 @@ export default function FeaturedProjects() {
 
               {/* Text Information */}
               <div className="flex flex-col gap-2 p-6">
-                <h3 className="text-lg font-bold text-zinc-900 group-hover:text-teal-600 transition-colors">
+                <h3 className="text-lg font-bold text-brand-dark group-hover:text-brand-primary transition-colors">
                   {proj.name}
                 </h3>
                 
                 {/* Location indicator */}
                 <div className="flex items-center gap-1.5 text-sm text-zinc-500">
                   <svg
-                    className="h-4 w-4 shrink-0 text-teal-500"
+                    className="h-4 w-4 shrink-0 text-brand-primary"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -113,7 +113,7 @@ export default function FeaturedProjects() {
         <div className="mt-16 text-center">
           <Link
             href="/projects"
-            className="inline-flex h-12 items-center justify-center rounded-lg bg-zinc-900 px-8 text-base font-semibold text-white transition-all hover:bg-teal-600 hover:shadow-lg hover:shadow-teal-900/10 active:scale-95"
+            className="inline-flex h-12 items-center justify-center rounded-lg bg-brand-dark px-8 text-base font-semibold text-white transition-all hover:bg-brand-primary hover:text-brand-dark hover:shadow-lg hover:shadow-brand-primary/10 active:scale-95"
           >
             View All Projects
           </Link>
