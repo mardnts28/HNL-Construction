@@ -43,13 +43,13 @@ export default function Footer() {
                   HNL Construction
                 </span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-primary -mt-1.5">
-                  Architectural Systems
+                  Architects | Engineers | Builders
                 </span>
               </div>
             </Link>
             
             <p className="text-sm leading-relaxed text-zinc-400">
-              Engineering high-performance building envelopes and glass partition systems. We deliver bespoke aluminum, uPVC, and custom screen solutions tailored for luxury residential villas and high-rise developments.
+              Architects, Engineers, and Builders delivering exceptional construction projects with the highest level of professionalism, quality supplies, and craftsmanship. Serving clients across Metro Manila.
             </p>
 
             {/* Social Media Links */}
@@ -148,7 +148,7 @@ export default function Footer() {
                   />
                 </svg>
                 <span>
-                  1 Julia Vargas Avenue, Barangay Ugong, Pasig City, 1600, Metro Manila, Philippines
+                  Tower 1, 3607 The Olive Place, Shaw Blvd, Mandaluyong City
                 </span>
               </li>
 
@@ -167,8 +167,8 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <a href="tel:+63286813538" className="transition-colors hover:text-white">
-                  +632 8681 3538
+                <a href="tel:+639989920849" className="transition-colors hover:text-white">
+                  (+63) 998 992 0849
                 </a>
               </li>
 
@@ -187,8 +187,8 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <a href="mailto:info@hnlconstruction.ph" className="transition-colors hover:text-white">
-                  info@hnlconstruction.ph
+                <a href="mailto:hnldesignandconstruction@gmail.com" className="transition-colors hover:text-white">
+                  hnldesignandconstruction@gmail.com
                 </a>
               </li>
 

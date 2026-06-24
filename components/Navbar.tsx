@@ -75,7 +75,7 @@ export default function Navbar() {
                 HNL Construction
               </span>
               <span className="text-[10px] font-bold uppercase tracking-widest text-brand-primary -mt-1.5">
-                Architectural Systems
+                Architects | Engineers | Builders
               </span>
             </div>
           </Link>

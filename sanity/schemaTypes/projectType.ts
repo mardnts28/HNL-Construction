@@ -18,9 +18,10 @@ export const projectType = defineType({
 
     defineField({
       name: 'slug',
-      title: 'Slug',
+      title: 'Page URL (Auto-generated)',
       type: 'slug',
-      description: 'Auto-generated URL-friendly identifier from the title.',
+      description: 'This is automatically created from the project title. No need to edit this.',
+      readOnly: true,
       options: {
         source: 'title',
         maxLength: 96,
@@ -73,16 +74,16 @@ export const projectType = defineType({
       fields: [
         defineField({
           name: 'alt',
-          title: 'Alt Text',
+          title: 'Image Description',
           type: 'string',
-          description: 'Describe the image for screen readers and SEO.',
+          description: 'Briefly describe what is in the photo (e.g., "Front view of the building" or "Interior hallway with glass panels"). This helps with Google search visibility.',
           validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'caption',
-          title: 'Caption',
+          title: 'Caption (Optional)',
           type: 'string',
-          description: 'Optional caption displayed below the image.',
+          description: 'A short label shown below the image on the website, if any.',
         }),
       ],
       validation: (Rule) => Rule.required(),
@@ -101,14 +102,16 @@ export const projectType = defineType({
           fields: [
             defineField({
               name: 'alt',
-              title: 'Alt Text',
+              title: 'Image Description',
               type: 'string',
+              description: 'Briefly describe what is in this photo (e.g., "Sliding glass door installation").',
               validation: (Rule) => Rule.required(),
             }),
             defineField({
               name: 'caption',
-              title: 'Caption',
+              title: 'Caption (Optional)',
               type: 'string',
+              description: 'A short label shown with this photo, if any.',
             }),
           ],
         },

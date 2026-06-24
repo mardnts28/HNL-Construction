@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { supabase } from "@/lib/supabaseClient";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -133,9 +132,9 @@ export default function ContactPage() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-brand-dark">Address</span>
-                      <span className="text-sm text-zinc-500 leading-relaxed">
-                        1 Julia Vargas Avenue, Barangay Ugong, Pasig City, 1600, Metro Manila, Philippines
-                      </span>
+                       <span className="text-sm text-zinc-500 leading-relaxed">
+                         Tower 1, 3607 The Olive Place, Shaw Blvd, Mandaluyong City
+                       </span>
                     </div>
                   </div>
 
@@ -148,8 +147,8 @@ export default function ContactPage() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-brand-dark">Phone</span>
-                      <a href="tel:+63286813538" className="text-sm text-zinc-500 hover:text-brand-primary transition-colors">
-                        +632 8681 3538
+                      <a href="tel:+639989920849" className="text-sm text-zinc-500 hover:text-brand-primary transition-colors">
+                        (+63) 998 992 0849
                       </a>
                     </div>
                   </div>
@@ -163,8 +162,8 @@ export default function ContactPage() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-brand-dark">Email</span>
-                      <a href="mailto:info@hnlconstruction.ph" className="text-sm text-zinc-500 hover:text-brand-primary transition-colors">
-                        info@hnlconstruction.ph
+                      <a href="mailto:hnldesignandconstruction@gmail.com" className="text-sm text-zinc-500 hover:text-brand-primary transition-colors">
+                        hnldesignandconstruction@gmail.com
                       </a>
                     </div>
                   </div>
@@ -179,7 +178,7 @@ export default function ContactPage() {
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-brand-dark">Business Hours</span>
                       <span className="text-sm text-zinc-500">
-                        Monday – Friday, 9:00 am – 6:00 pm
+                        Monday – Saturday, 8:00 am – 5:00 pm
                       </span>
                     </div>
                   </div>
@@ -187,7 +186,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8 pt-6 border-t border-brand-secondary/20 text-xs text-zinc-400">
-                Our fabrication workshops and office divisions are located in Pasig City, Metro Manila.
+                HNL Design and Construction — Architects | Engineers | Builders, Mandaluyong City, Metro Manila.
               </div>
             </div>
 

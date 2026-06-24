@@ -19,9 +19,10 @@ export const productType = defineType({
 
     defineField({
       name: 'slug',
-      title: 'Slug',
+      title: 'Page URL (Auto-generated)',
       type: 'slug',
-      description: 'Auto-generated URL identifier from the title.',
+      description: 'This is automatically created from the product title. No need to edit this.',
+      readOnly: true,
       options: {
         source: 'title',
         maxLength: 96,
@@ -57,7 +58,7 @@ export const productType = defineType({
       name: 'fullOverview',
       title: 'System Overview / Details',
       type: 'array',
-      description: 'Detailed description paragraphs for the product system detail page.',
+      description: 'Write a detailed description of this product system. You can use bold or italic text for emphasis.',
       of: [
         {
           type: 'block',
@@ -116,9 +117,9 @@ export const productType = defineType({
       fields: [
         defineField({
           name: 'alt',
-          title: 'Alt Text',
+          title: 'Image Description',
           type: 'string',
-          description: 'Required for accessibility and SEO.',
+          description: 'Briefly describe the product shown (e.g., "Aluminum sliding window in white finish"). This helps with Google search visibility.',
           validation: (Rule) => Rule.required(),
         }),
       ],
@@ -140,20 +141,21 @@ export const productType = defineType({
           fields: [
             defineField({
               name: 'caption',
-              title: 'Caption',
+              title: 'Caption (Optional)',
               type: 'string',
-              description: 'e.g., Panoramic Slim-Frame Sliders',
+              description: 'A short label for this photo (e.g., "Panoramic Slim-Frame Sliders").',
             }),
             defineField({
               name: 'scope',
-              title: 'Scope / Location',
+              title: 'Location / Project',
               type: 'string',
-              description: 'e.g., Luxury Residential Villa, Makati',
+              description: 'Where was this installed? (e.g., "Luxury Residential Villa, Makati").',
             }),
             defineField({
               name: 'alt',
-              title: 'Alt Text',
+              title: 'Image Description',
               type: 'string',
+              description: 'Briefly describe what is in this photo (e.g., "Close-up of installed sliding door").',
               validation: (Rule) => Rule.required(),
             }),
           ],

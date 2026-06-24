@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabaseClient'
+import { sendInquiryNotification } from '@/lib/resend'
 
 export async function POST(request: Request) {
   try {
@@ -53,6 +54,20 @@ export async function POST(request: Request) {
         { error: 'Failed to store inquiry in database.' },
         { status: 500 }
       )
+    }
+
+    // 3. Send email notification (non-blocking — don't fail the form if email fails)
+    try {
+      await sendInquiryNotification({
+        name: name.trim(),
+        email: email.trim().toLowerCase(),
+        phone: phone ? phone.trim() : null,
+        projectType,
+        message: message.trim(),
+      })
+    } catch (emailError) {
+      // Log but don't break the form submission — the inquiry is already saved
+      console.error('Email notification failed (inquiry still saved):', emailError)
     }
 
     return NextResponse.json({

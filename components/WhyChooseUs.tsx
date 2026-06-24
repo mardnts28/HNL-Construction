@@ -9,8 +9,17 @@ interface FeatureItem {
 export default function WhyChooseUs() {
   const features: FeatureItem[] = [
     {
-      title: "10-Year Guarantee",
-      desc: "We back our systems with a comprehensive ten-year product warranty covering profiles and hardware durability. This ensures long-term protection against air-water leakage, structural warping, and material degradation.",
+      title: "We Are Passionate",
+      desc: "We guarantee that every project is carried out with the utmost professionalism and with high-quality supplies while providing clients with support and accessibility.",
+      icon: (
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Honest and Dependable",
+      desc: "We strive to complete all projects with integrity, not only with our clients but also with our suppliers and contractors. Honesty is our only policy.",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -18,29 +27,11 @@ export default function WhyChooseUs() {
       ),
     },
     {
-      title: "Custom Solutions",
-      desc: "Every window, door, and curtain wall is fabricated to the exact configurations of your architectural drawings. Our drafting team tailors framing depths and profiles to accommodate complex corners and custom openings.",
+      title: "We Are Always Improving",
+      desc: "We promise to complete all projects within the agreed-upon timeframe. We pay close attention to the smallest of details and make sure that everything is done correctly, all while making use of the most advanced technology and tools.",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-        </svg>
-      ),
-    },
-    {
-      title: "Competitive Pricing",
-      desc: "By combining direct material sourcing with highly efficient, in-house fabrication, we bypass intermediary margins. This structural advantage allows us to deliver commercial-grade systems at highly accessible price points.",
-      icon: (
-        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-    },
-    {
-      title: "Expert Team",
-      desc: "Our division is run by licensed structural engineers, technical draftsmen, and certified site installation managers. We supervise every stage of execution, from preliminary wind load analysis to final glazing sealant tests.",
-      icon: (
-        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
     },
@@ -56,15 +47,15 @@ export default function WhyChooseUs() {
             Why HNL Construction
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl">
-            The HNL Advantage
+            Why Choose Us?
           </h2>
           <p className="text-base sm:text-lg text-zinc-500 leading-relaxed">
-            We hold ourselves to strict manufacturing benchmarks and engineering criteria, guaranteeing your project stands firm against time, wear, and weather.
+            We are committed to delivering every project with passion, integrity, and continuous improvement—ensuring the best outcomes for our clients.
           </p>
         </div>
 
         {/* 4 Feature Columns Grid */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
           {features.map((feat) => (
             <div
               key={feat.title}

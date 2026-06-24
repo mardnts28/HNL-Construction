@@ -2,10 +2,54 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { SanityProject } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 
+/**
+ * SmartImage — uses CldImage for Cloudinary public IDs,
+ * falls back to next/image for full https:// URLs (e.g. from Sanity CDN).
+ */
+function SmartImage({
+  src,
+  alt,
+  fill,
+  className,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  fill?: boolean;
+  className?: string;
+  priority?: boolean;
+}) {
+  const isExternalUrl = src.startsWith("http");
+  if (isExternalUrl) {
+    return (
+      <Image
+        src={src}
+        alt={alt}
+        fill={fill}
+        className={className}
+        priority={priority}
+      />
+    );
+  }
+  // Cloudinary public ID path (e.g. "hnl/hero_bg" or "hnl/project_condo")
+  return (
+    <CldImage
+      src={src}
+      alt={alt}
+      fill={fill}
+      className={className}
+      priority={priority}
+    />
+  );
+}
+
 // Mock fallback project data
+// ⚡ imageUrl uses Cloudinary public IDs (folder/filename without extension)
+// Upload your images to Cloudinary and set the public ID here.
 const fallbackProjects = [
   {
     _id: "mock-1",
@@ -13,7 +57,7 @@ const fallbackProjects = [
     location: "Cebu City",
     category: "residential" as const,
     description: "Luxury high-rise residential condos with panoramic views.",
-    imageUrl: "/images/project_condo.png",
+    imageUrl: "hnl/project_condo",
   },
   {
     _id: "mock-2",
@@ -21,7 +65,7 @@ const fallbackProjects = [
     location: "Taguig",
     category: "commercial" as const,
     description: "Modern office building with energy-efficient façade.",
-    imageUrl: "/images/project_office.png",
+    imageUrl: "hnl/project_office",
   },
   {
     _id: "mock-3",
@@ -29,7 +73,7 @@ const fallbackProjects = [
     location: "Makati",
     category: "residential" as const,
     description: "Spacious villa with glass curtain walls.",
-    imageUrl: "/images/project_villa.png",
+    imageUrl: "hnl/project_villa",
   },
   {
     _id: "mock-4",
@@ -37,7 +81,7 @@ const fallbackProjects = [
     location: "Cebu",
     category: "industrial" as const,
     description: "Heavy-duty industrial facility with robust structural design.",
-    imageUrl: "/images/hero_bg.png",
+    imageUrl: "hnl/hero_bg",
   },
   {
     _id: "mock-5",
@@ -45,7 +89,7 @@ const fallbackProjects = [
     location: "Manila",
     category: "hospital" as const,
     description: "State-of-the-art hospital with modular rooms.",
-    imageUrl: "/images/hero_bg.png",
+    imageUrl: "hnl/hero_bg",
   },
 ];
 
@@ -86,8 +130,9 @@ export default function ProjectsClient({ initialProjects }: ProjectsClientProps)
       {/* 1. Page Hero Banner */}
       <section className="relative flex h-[35vh] min-h-[250px] items-center justify-center overflow-hidden bg-brand-dark text-white">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero_bg.png"
+          {/* CldImage — src is your Cloudinary public ID */}
+          <CldImage
+            src="hnl/hero_bg"
             alt="Projects overview background facade"
             fill
             priority
@@ -135,7 +180,8 @@ export default function ProjectsClient({ initialProjects }: ProjectsClientProps)
                 className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200/60 bg-white shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="relative h-60 w-full overflow-hidden bg-zinc-100">
-                  <Image
+                  {/* SmartImage picks CldImage for Cloudinary IDs, next/image for Sanity URLs */}
+                  <SmartImage
                     src={proj.imageUrl}
                     alt={proj.title}
                     fill
